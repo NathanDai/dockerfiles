@@ -9,7 +9,7 @@ RUN mkdir -p /rrshare \
         && wget -q http://appdown.rrys.tv/rrshareweb_rpi.2.20.tar.gz -O /rrshare/rrshareweb_rpi.2.20.tar.gz \
         && tar -zxvf /rrshare/rrshareweb_rpi.2.20.tar.gz -C /rrshare/ \
         && rm -rf /rrshare/rrshareweb_rpi.2.20.tar.gz 
-RUN     apt purge wget -y \
+RUN apt purge wget -y \
         && apt autoremove -y
 
 WORKDIR /
