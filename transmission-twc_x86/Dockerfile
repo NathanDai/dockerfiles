@@ -29,9 +29,6 @@ RUN \
 	cp -rf /tmp/transmission-web-control-${WEBUI_VERSION}/src/* /usr/share/transmission/web/ && \
 	rm -rf /tmp/*
 
-# copy local files
-COPY /root/ /
-
 # ports and volumes
 EXPOSE 9091 45555
-VOLUME /config /downloads /watch
+VOLUME /root/config /root/downloads /root/watch
