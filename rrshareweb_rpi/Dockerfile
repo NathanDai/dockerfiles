@@ -1,4 +1,5 @@
-FROM arm64v8/ubuntu
+FROM multiarch/qemu-user-static:x86_64-aarch64 as qemu
+FROM arm64v8/ubuntu AS compile-image
 LABEL MAINTAINER="daizheng@dashwood.xyz"
 RUN apt update \
         && apt install wget tzdata -y \
